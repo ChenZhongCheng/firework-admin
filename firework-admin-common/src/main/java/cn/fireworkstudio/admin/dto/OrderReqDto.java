@@ -37,6 +37,13 @@ public class OrderReqDto extends PageReqDto {
      */
     private String endDate;
 
+    public OrderReqDto() {
+    }
+
+    public OrderReqDto(Integer reqId, Integer start, Integer rows) {
+        super(reqId, start, rows);
+    }
+
     /**
      * Get orderNo
      */

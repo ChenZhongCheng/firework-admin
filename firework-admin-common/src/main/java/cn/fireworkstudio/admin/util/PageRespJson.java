@@ -28,7 +28,7 @@ public class PageRespJson extends RespJson {
      * @param reqId        Request ID
      * @param totalRecords Total Records
      */
-    public static PageRespJson buildSuccessResponse(Object data, Long reqId, Long totalRecords) {
+    public static PageRespJson buildSuccessResponse(Object data, Integer reqId, Integer totalRecords) {
         PageRespJson respJson = new PageRespJson();
         respJson.setCode(ResponseCode.SUCCESS.getCode());
         respJson.setData(data);
@@ -44,7 +44,7 @@ public class PageRespJson extends RespJson {
      * @param errorMsg     Error Message
      * @param reqId        Request ID
      */
-    public static PageRespJson buildFailureResponse(String errorMsg, Long reqId) {
+    public static PageRespJson buildFailureResponse(String errorMsg, Integer reqId) {
         PageRespJson respJson = new PageRespJson();
         respJson.setCode(ResponseCode.FAILURE.getCode());
         respJson.setMsg(errorMsg);

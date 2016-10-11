@@ -43,4 +43,15 @@ public class OrderDaoImpl implements OrderDao {
     public List<Order> searchOrder(OrderReqDto reqDto) {
         return sessionTemplate.selectList(NAMESPACE + ".searchOrder", reqDto);
     }
+
+    /**
+     * Get order count
+     *
+     * @param reqDto search criteria
+     * @return order count
+     */
+    @Override
+    public int searchOrderCount(OrderReqDto reqDto) {
+        return sessionTemplate.selectOne(NAMESPACE + ".searchOrderCount", reqDto);
+    }
 }

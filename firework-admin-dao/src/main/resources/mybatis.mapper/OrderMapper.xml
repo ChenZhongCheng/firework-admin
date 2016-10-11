@@ -118,7 +118,39 @@
                 ]]>
             </if>
             AND valid = 1
-            LIMIT #{start}, #{rows}
+            <if test="start != null and rows != null">
+              LIMIT #{start}, #{rows}
+            </if>
+        </trim>
+    </select>
+
+    <!--Seach order-->
+    <select id="searchOrderCount" parameterType="cn.fireworkstudio.admin.dto.OrderReqDto" resultType="java.lang.Integer">
+        SELECT
+          count(1) as count
+        FROM f_order
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test="orderNo != null and orderNo != ''">
+                AND order_no = #{orderNo}
+            </if>
+            <if test="customerName != null and customerName != ''">
+                AND customer_name = #{customerName}
+            </if>
+            <if test="customerIdNumber != null">
+                AND customer_id_number = #{customerIdNumber}
+            </if>
+            <if test="customerMobile != null">
+                AND customer_mobile = #{customerMobile}
+            </if>
+            <if test="startDate != null">
+                AND create_time >= str_to_date(#{startDate}, "%Y-%m-%d")
+            </if>
+            <if test="endDate != null">
+                <![CDATA[
+                  AND create_time < date_add(str_to_date(#{endDate}, "%Y-%m-%d"), INTERVAL 1 DAY)
+                ]]>
+            </if>
+            AND valid = 1
         </trim>
     </select>
 </mapper>

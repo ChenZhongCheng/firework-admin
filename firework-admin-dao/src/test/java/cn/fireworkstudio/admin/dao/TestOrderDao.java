@@ -63,4 +63,18 @@ public class TestOrderDao {
         List<Order> orderList = orderDao.searchOrder(reqDto);
         logger.info(JSON.toJSONString(orderList));
     }
+
+    @Test
+    public void testSearchOrderCount() throws Exception {
+        OrderReqDto reqDto = new OrderReqDto();
+        reqDto.setOrderNo("OF2016100100001");
+        reqDto.setCustomerName("Tom");
+        reqDto.setCustomerMobile("13100000001");
+        reqDto.setCustomerIdNumber("0241000321312");
+        reqDto.setStartDate("2016-10-01");
+        reqDto.setEndDate("2016-10-01");
+
+        int orderCount = orderDao.searchOrderCount(reqDto);
+        logger.info("Order count: " + orderCount);
+    }
 }

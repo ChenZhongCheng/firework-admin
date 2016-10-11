@@ -11,4 +11,6 @@ public class StringConstant {
     public static final String SYSTEM = "system";
     public static final String EMPTY_STRING = "";
     public static final String DEFAULT_STRING_SEPARATOR = ",";
+    public static final String ZERO = "0";
+    public static final String ONE = "1";
 }

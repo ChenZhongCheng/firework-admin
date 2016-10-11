@@ -27,4 +27,12 @@ public interface OrderDao {
      * @return orders found
      */
     List<Order> searchOrder(OrderReqDto reqDto);
+
+    /**
+     * Get order count
+     *
+     * @param reqDto search criteria
+     * @return order count
+     */
+    int searchOrderCount(OrderReqDto reqDto);
 }
