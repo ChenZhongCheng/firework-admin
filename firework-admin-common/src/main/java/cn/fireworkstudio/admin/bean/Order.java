@@ -1,5 +1,9 @@
 package cn.fireworkstudio.admin.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -209,6 +213,7 @@ public class Order implements Serializable {
     /**
      * Get valid
      */
+    @JsonIgnore
     public Integer getValid() {
         return valid;
     }
@@ -223,6 +228,8 @@ public class Order implements Serializable {
     /**
      * Get createTime
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     public Date getCreateTime() {
         return createTime;
     }
@@ -237,6 +244,7 @@ public class Order implements Serializable {
     /**
      * Get updateTime
      */
+    @JsonIgnore
     public Date getUpdateTime() {
         return updateTime;
     }
@@ -251,6 +259,7 @@ public class Order implements Serializable {
     /**
      * Get createUser
      */
+    @JsonIgnore
     public String getCreateUser() {
         return createUser;
     }
@@ -265,6 +274,7 @@ public class Order implements Serializable {
     /**
      * Get updateUser
      */
+    @JsonIgnore
     public String getUpdateUser() {
         return updateUser;
     }
