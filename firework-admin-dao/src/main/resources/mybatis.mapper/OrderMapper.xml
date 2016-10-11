@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--Author: Daniel Kong-->
+<mapper namespace="mybatis.mapper.OrderMapper">
+    <resultMap id="BaseResultMap" type="cn.fireworkstudio.admin.bean.Order">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="order_no" property="orderNo" jdbcType="VARCHAR"/>
+        <result column="customer_name" property="customerName" jdbcType="VARCHAR"/>
+        <result column="customer_gender" property="customerGender" jdbcType="INTEGER"/>
+        <result column="customer_id_number" property="customerIdNumber" jdbcType="VARCHAR"/>
+        <result column="customer_mobile" property="customerMobile" jdbcType="VARCHAR"/>
+        <result column="customer_address" property="customerAddress" jdbcType="VARCHAR"/>
+        <result column="customer_zip" property="customerZip" jdbcType="VARCHAR"/>
+        <result column="cost" property="cost" jdbcType="DOUBLE"/>
+        <result column="valid" property="valid" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="create_user" property="createUser" jdbcType="VARCHAR"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="update_user" property="updateUser" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+		id, order_no, customer_name, customer_gender, customer_id_number, customer_mobile, customer_address, customer_zip,
+		cost, valid, create_time, create_user, update_time, update_user
+	</sql>
+
+    <!--Add new order-->
+    <insert id="addOrder" parameterType="cn.fireworkstudio.admin.bean.Order" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO f_order
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="orderNo != null">
+                order_no,
+            </if>
+            <if test="customerName != null">
+                customer_name,
+            </if>
+            <if test="customerGender != null">
+                customer_gender,
+            </if>
+            <if test="customerIdNumber != null">
+                customer_id_number,
+            </if>
+            <if test="customerMobile != null">
+                customer_mobile,
+            </if>
+            <if test="customerAddress != null">
+                customer_address,
+            </if>
+            <if test="customerZip != null">
+                customer_zip,
+            </if>
+            <if test="cost != null">
+                cost,
+            </if>
+            <if test="valid != null">
+                valid,
+            </if>
+            create_time,
+            create_user
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="orderNo != null">
+                #{orderNo},
+            </if>
+            <if test="customerName != null">
+                #{customerName},
+            </if>
+            <if test="customerGender != null">
+                #{customerGender},
+            </if>
+            <if test="customerIdNumber != null">
+                #{customerIdNumber},
+            </if>
+            <if test="customerMobile != null">
+                #{customerMobile},
+            </if>
+            <if test="customerAddress != null">
+                #{customerAddress},
+            </if>
+            <if test="customerZip != null">
+                #{customerZip},
+            </if>
+            <if test="cost != null">
+                #{cost},
+            </if>
+            <if test="valid != null">
+                #{valid},
+            </if>
+            now(),
+            #{createUser}
+        </trim>
+    </insert>
+
+    <!--Seach order-->
+    <select id="searchOrder" parameterType="cn.fireworkstudio.admin.dto.OrderReqDto" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM f_order
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test="orderNo != null and orderNo != ''">
+                AND order_no = #{orderNo}
+            </if>
+            <if test="customerName != null and customerName != ''">
+                AND customer_name = #{customerName}
+            </if>
+            <if test="customerIdNumber != null">
+                AND customer_id_number = #{customerIdNumber}
+            </if>
+            <if test="customerMobile != null">
+                AND customer_mobile = #{customerMobile}
+            </if>
+            <if test="startDate != null">
+                AND create_time >= str_to_date(#{startDate}, "%Y-%m-%d")
+            </if>
+            <if test="endDate != null">
+                <![CDATA[
+                  AND create_time < date_add(str_to_date(#{endDate}, "%Y-%m-%d"), INTERVAL 1 DAY)
+                ]]>
+            </if>
+            AND valid = 1
+            LIMIT #{start}, #{rows}
+        </trim>
+    </select>
+</mapper>
