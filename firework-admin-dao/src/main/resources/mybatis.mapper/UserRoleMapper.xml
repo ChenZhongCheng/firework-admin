@@ -65,4 +65,13 @@
             </if>
         </trim>
     </select>
+
+    <!--Search user role mapping-->
+    <select id="searchRoleByUserId" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT role_name
+        FROM f_user_role
+        WHERE
+          user_id = #{userId}
+          AND valid = 1
+    </select>
 </mapper>

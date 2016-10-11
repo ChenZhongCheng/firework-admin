@@ -43,4 +43,15 @@ public class UserRoleDaoImpl implements UserRoleDao {
     public List<UserRole> searchUserRole(UserRole userRole) {
         return sessionTemplate.selectList(NAMESPACE + ".searchUserRole", userRole);
     }
+
+    /**
+     * Search user role by user id
+     *
+     * @param userId user id
+     * @return role list
+     */
+    @Override
+    public List<String> searchRoleByUserId(String userId) {
+        return sessionTemplate.selectList(NAMESPACE + ".searchRoleByUserId", userId);
+    }
 }

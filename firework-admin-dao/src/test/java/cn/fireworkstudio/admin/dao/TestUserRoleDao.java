@@ -46,7 +46,13 @@ public class TestUserRoleDao {
         userRole.setUserId("demo");
         userRole.setRoleName("GUEST");
 
-        List<UserRole> roleModuleList = userRoleDao.searchUserRole(userRole);
-        logger.info(JSON.toJSONString(roleModuleList));
+        List<UserRole> userRoleList = userRoleDao.searchUserRole(userRole);
+        logger.info(JSON.toJSONString(userRoleList));
+    }
+
+    @Test
+    public void testSearchRoleByUserId() throws Exception {
+        List<String> roleList = userRoleDao.searchRoleByUserId("demo");
+        logger.info(JSON.toJSONString(roleList));
     }
 }

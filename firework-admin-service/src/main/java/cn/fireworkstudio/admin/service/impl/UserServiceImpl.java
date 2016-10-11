@@ -5,6 +5,7 @@ import cn.fireworkstudio.admin.constant.StringConstant;
 import cn.fireworkstudio.admin.dao.LoginHistoryDao;
 import cn.fireworkstudio.admin.dao.ModuleDao;
 import cn.fireworkstudio.admin.dao.UserDao;
+import cn.fireworkstudio.admin.dao.UserRoleDao;
 import cn.fireworkstudio.admin.dto.LoginReqDto;
 import cn.fireworkstudio.admin.dto.LoginResDto;
 import cn.fireworkstudio.admin.service.JwtService;
@@ -47,6 +48,9 @@ public class UserServiceImpl implements UserService {
     private ModuleDao moduleDao;
 
     @Autowired
+    private UserRoleDao userRoleDao;
+
+    @Autowired
     private JwtService jwtService;
 
     /**
@@ -83,10 +87,14 @@ public class UserServiceImpl implements UserService {
         // Build system menus
         resDto.setMenuList(buildSystemMenus(reqDto.getUserId()));
 
+        // Get user role
+        List<String> roleList = userRoleDao.searchRoleByUserId(reqDto.getUserId());
+        String role = StringUtils.concatStrFromList(roleList, null);
+
         // Fill data into result dto
         resDto.setUserId(findUser.getUserId());
         resDto.setUserName(findUser.getUserName());
-        resDto.setToken(generateAccessToken(reqDto, null));
+        resDto.setToken(generateAccessToken(reqDto, role));
 
         return resDto;
     }
