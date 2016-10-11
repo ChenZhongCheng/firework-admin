@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService {
         queryUser.setValid(1);
         List<User> userList = userDao.searchUser(queryUser);
 
-        if (userList == null)
+        if (userList == null || userList.isEmpty())
             throw new RuntimeException(ERR_USER_NOT_EXIST);
 
         // As user_id is unique key, only one record found
