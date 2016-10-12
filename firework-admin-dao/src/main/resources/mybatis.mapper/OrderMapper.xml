@@ -5,6 +5,7 @@
     <resultMap id="BaseResultMap" type="cn.fireworkstudio.admin.bean.Order">
         <id column="id" property="id" jdbcType="BIGINT"/>
         <result column="order_no" property="orderNo" jdbcType="VARCHAR"/>
+        <result column="order_type" property="orderType" jdbcType="INTEGER"/>
         <result column="customer_name" property="customerName" jdbcType="VARCHAR"/>
         <result column="customer_gender" property="customerGender" jdbcType="INTEGER"/>
         <result column="customer_id_number" property="customerIdNumber" jdbcType="VARCHAR"/>
@@ -20,8 +21,8 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-		id, order_no, customer_name, customer_gender, customer_id_number, customer_mobile, customer_address, customer_zip,
-		cost, valid, create_time, create_user, update_time, update_user
+		id, order_no, order_type, customer_name, customer_gender, customer_id_number, customer_mobile, customer_address,
+		customer_zip, cost, valid, create_time, create_user, update_time, update_user
 	</sql>
 
     <!--Add new order-->
@@ -30,6 +31,9 @@
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="orderNo != null">
                 order_no,
+            </if>
+            <if test="orderType != null">
+                order_type,
             </if>
             <if test="customerName != null">
                 customer_name,
@@ -61,6 +65,9 @@
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="orderNo != null">
                 #{orderNo},
+            </if>
+            <if test="orderType != null">
+                #{orderType},
             </if>
             <if test="customerName != null">
                 #{customerName},
@@ -100,6 +107,9 @@
             <if test="orderNo != null and orderNo != ''">
                 AND order_no = #{orderNo}
             </if>
+            <if test="orderType != null">
+                AND order_type = #{orderType}
+            </if>
             <if test="customerName != null and customerName != ''">
                 AND customer_name = #{customerName}
             </if>
@@ -132,6 +142,9 @@
         <trim prefix="WHERE" prefixOverrides="AND|OR">
             <if test="orderNo != null and orderNo != ''">
                 AND order_no = #{orderNo}
+            </if>
+            <if test="orderType != null">
+                AND order_type = #{orderType}
             </if>
             <if test="customerName != null and customerName != ''">
                 AND customer_name = #{customerName}

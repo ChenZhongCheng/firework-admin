@@ -13,6 +13,11 @@ public class OrderReqDto extends PageReqDto {
     private String orderNo;
 
     /**
+     * Order Type: 1 Online 2 Offline
+     */
+    private Integer orderType;
+
+    /**
      * Customer Name
      */
     private String customerName;
@@ -37,6 +42,9 @@ public class OrderReqDto extends PageReqDto {
      */
     private String endDate;
 
+    /**
+     * Constructor
+     */
     public OrderReqDto() {
     }
 
@@ -56,6 +64,20 @@ public class OrderReqDto extends PageReqDto {
      */
     public void setOrderNo(String orderNo) {
         this.orderNo = orderNo;
+    }
+
+    /**
+     * Get orderType
+     */
+    public Integer getOrderType() {
+        return orderType;
+    }
+
+    /**
+     * Set orderType
+     */
+    public void setOrderType(Integer orderType) {
+        this.orderType = orderType;
     }
 
     /**

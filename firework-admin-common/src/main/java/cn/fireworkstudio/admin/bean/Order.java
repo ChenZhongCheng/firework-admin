@@ -25,6 +25,11 @@ public class Order implements Serializable {
     private String orderNo;
 
     /**
+     * Order Type: 1 Online 2 Offline
+     */
+    private Integer orderType;
+
+    /**
      * Customer Name
      */
     private String customerName;
@@ -110,6 +115,20 @@ public class Order implements Serializable {
      */
     public void setOrderNo(String orderNo) {
         this.orderNo = orderNo;
+    }
+
+    /**
+     * Get orderType
+     */
+    public Integer getOrderType() {
+        return orderType;
+    }
+
+    /**
+     * Set orderType
+     */
+    public void setOrderType(Integer orderType) {
+        this.orderType = orderType;
     }
 
     /**

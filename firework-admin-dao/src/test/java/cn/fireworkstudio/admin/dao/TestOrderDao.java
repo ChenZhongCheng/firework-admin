@@ -4,6 +4,7 @@ import cn.fireworkstudio.admin.bean.Order;
 import cn.fireworkstudio.admin.constant.StringConstant;
 import cn.fireworkstudio.admin.dto.OrderReqDto;
 import cn.fireworkstudio.admin.enums.Gender;
+import cn.fireworkstudio.admin.enums.OrderType;
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,6 +37,7 @@ public class TestOrderDao {
     public void testAddOrder() throws Exception {
         Order order = new Order();
         order.setOrderNo("OF2016100100001");
+        order.setOrderType(OrderType.ONLINE.getCode());
         order.setCustomerName("Tom");
         order.setCustomerGender(Gender.MALE.getCode());
         order.setCustomerIdNumber("0241000321312");
@@ -52,27 +54,17 @@ public class TestOrderDao {
     public void testSearchOrder() throws Exception {
         OrderReqDto reqDto = new OrderReqDto();
         reqDto.setOrderNo("OF2016100100001");
+        reqDto.setOrderType(OrderType.ONLINE.getCode());
         reqDto.setCustomerName("Tom");
         reqDto.setCustomerMobile("13100000001");
         reqDto.setCustomerIdNumber("0241000321312");
-        reqDto.setStartDate("2016-10-01");
-        reqDto.setEndDate("2016-10-01");
+        reqDto.setStartDate("2016-10-12");
+        reqDto.setEndDate("2016-10-12");
         reqDto.setStart(0);
         reqDto.setRows(10);
 
         List<Order> orderList = orderDao.searchOrder(reqDto);
         logger.info(JSON.toJSONString(orderList));
-    }
-
-    @Test
-    public void testSearchOrderCount() throws Exception {
-        OrderReqDto reqDto = new OrderReqDto();
-        reqDto.setOrderNo("OF2016100100001");
-        reqDto.setCustomerName("Tom");
-        reqDto.setCustomerMobile("13100000001");
-        reqDto.setCustomerIdNumber("0241000321312");
-        reqDto.setStartDate("2016-10-01");
-        reqDto.setEndDate("2016-10-01");
 
         int orderCount = orderDao.searchOrderCount(reqDto);
         logger.info("Order count: " + orderCount);
