@@ -22,6 +22,11 @@ public class PageRespJson extends RespJson {
     private long recordsTotal;
 
     /**
+     * Records Filtered
+     */
+    private long recordsFiltered;
+
+    /**
      * Construct Success Response
      *
      * @param data         Data Field
@@ -35,6 +40,7 @@ public class PageRespJson extends RespJson {
         respJson.setMsg(StringConstant.EMPTY_STRING);
         respJson.setReqId(reqId);
         respJson.setRecordsTotal(totalRecords);
+        respJson.setRecordsFiltered(totalRecords);
         return respJson;
     }
 
@@ -50,6 +56,7 @@ public class PageRespJson extends RespJson {
         respJson.setMsg(errorMsg);
         respJson.setReqId(reqId);
         respJson.setRecordsTotal(0L);
+        respJson.setRecordsFiltered(0L);
         return respJson;
     }
 
@@ -79,5 +86,19 @@ public class PageRespJson extends RespJson {
      */
     public void setRecordsTotal(long recordsTotal) {
         this.recordsTotal = recordsTotal;
+    }
+
+    /**
+     * Get recordsFiltered
+     */
+    public long getRecordsFiltered() {
+        return recordsFiltered;
+    }
+
+    /**
+     * Set recordsFiltered
+     */
+    public void setRecordsFiltered(long recordsFiltered) {
+        this.recordsFiltered = recordsFiltered;
     }
 }

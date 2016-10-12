@@ -12,6 +12,7 @@ adminApp.directive('ngdatepicker', function () {
                 WdatePicker({
                     readOnly: false,
                     dateFmt:'yyyy-MM-dd',
+                    lang: 'en',
                     onpicked: function () {
                         $scope.$digest();
                     }

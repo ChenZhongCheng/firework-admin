@@ -13,7 +13,7 @@ public class OrderReqDto extends PageReqDto {
     private String orderNo;
 
     /**
-     * Order Type: 1 Online 2 Offline
+     * Order Type: 1 Online Self-Run 2 Online outsource 3 Offline
      */
     private Integer orderType;
 

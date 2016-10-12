@@ -119,10 +119,10 @@
             <if test="customerMobile != null">
                 AND customer_mobile = #{customerMobile}
             </if>
-            <if test="startDate != null">
+            <if test="startDate != null and startDate != ''">
                 AND create_time >= str_to_date(#{startDate}, "%Y-%m-%d")
             </if>
-            <if test="endDate != null">
+            <if test="endDate != null and endDate != ''">
                 <![CDATA[
                   AND create_time < date_add(str_to_date(#{endDate}, "%Y-%m-%d"), INTERVAL 1 DAY)
                 ]]>
@@ -155,10 +155,10 @@
             <if test="customerMobile != null">
                 AND customer_mobile = #{customerMobile}
             </if>
-            <if test="startDate != null">
+            <if test="startDate != null and startDate != ''">
                 AND create_time >= str_to_date(#{startDate}, "%Y-%m-%d")
             </if>
-            <if test="endDate != null">
+            <if test="endDate != null and endDate != ''">
                 <![CDATA[
                   AND create_time < date_add(str_to_date(#{endDate}, "%Y-%m-%d"), INTERVAL 1 DAY)
                 ]]>
