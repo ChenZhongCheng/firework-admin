@@ -18,8 +18,6 @@
 * Junit support.
 * Spring MVC + Mybatis + AngularJS stack.
 
-## Remark:
-Currently only dashboard tab works, other demo tabs is to be completed before Oct.16th, 2016
 
 ## Install:
   
