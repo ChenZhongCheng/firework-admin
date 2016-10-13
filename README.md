@@ -56,13 +56,13 @@
 N/A
 
 ### Screenshots:
-![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161007232234.jpg?imageView2/2/w/800)
+![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161007232234.jpg)
 
-![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161008002231.jpg?imageView2/2/w/800)
+![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161008002231.jpg)
 
-![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161013100344.jpg?imageView2/2/w/800)
+![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161013100344.jpg)
 
-![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161013105031.jpg?imageView2/2/w/800)
+![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161013112853.jpg)
 ## License:
 
 License under [Apache 2.0 license](http://opensource.org/licenses/Apache-2.0)

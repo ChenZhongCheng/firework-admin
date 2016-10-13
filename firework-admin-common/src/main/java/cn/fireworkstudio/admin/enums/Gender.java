@@ -42,4 +42,16 @@ public enum Gender {
     public String getDesc() {
         return desc;
     }
+
+    /**
+     * Get by code
+     */
+    public static Gender getByCode(Integer code) {
+        for (Gender gender : values()) {
+            if (gender.getCode().intValue() == code) {
+                return gender;
+            }
+        }
+        return null;
+    }
 }

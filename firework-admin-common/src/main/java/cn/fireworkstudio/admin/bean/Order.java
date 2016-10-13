@@ -30,6 +30,11 @@ public class Order implements Serializable {
     private Integer orderType;
 
     /**
+     * Order type name
+     */
+    private String orderTypeName;
+
+    /**
      * Customer Name
      */
     private String customerName;
@@ -38,6 +43,11 @@ public class Order implements Serializable {
      * Gender：1 Male 2 Female
      */
     private Integer customerGender;
+
+    /**
+     * Gender: Male / Female
+     */
+    private String customerGenderName;
 
     /**
      * Identification Number
@@ -132,6 +142,20 @@ public class Order implements Serializable {
     }
 
     /**
+     * Get orderTypeName
+     */
+    public String getOrderTypeName() {
+        return orderTypeName;
+    }
+
+    /**
+     * Set orderTypeName
+     */
+    public void setOrderTypeName(String orderTypeName) {
+        this.orderTypeName = orderTypeName;
+    }
+
+    /**
      * Get customerName
      */
     public String getCustomerName() {
@@ -157,6 +181,20 @@ public class Order implements Serializable {
      */
     public void setCustomerGender(Integer customerGender) {
         this.customerGender = customerGender;
+    }
+
+    /**
+     * Get customerGenderName
+     */
+    public String getCustomerGenderName() {
+        return customerGenderName;
+    }
+
+    /**
+     * Set customerGenderName
+     */
+    public void setCustomerGenderName(String customerGenderName) {
+        this.customerGenderName = customerGenderName;
     }
 
     /**

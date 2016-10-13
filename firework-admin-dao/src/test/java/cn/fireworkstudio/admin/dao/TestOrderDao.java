@@ -37,7 +37,7 @@ public class TestOrderDao {
     public void testAddOrder() throws Exception {
         Order order = new Order();
         order.setOrderNo("OF2016100100001");
-        order.setOrderType(OrderType.ONLINE.getCode());
+        order.setOrderType(OrderType.ONLINE_SELF_RUN.getCode());
         order.setCustomerName("Tom");
         order.setCustomerGender(Gender.MALE.getCode());
         order.setCustomerIdNumber("0241000321312");
@@ -54,7 +54,7 @@ public class TestOrderDao {
     public void testSearchOrder() throws Exception {
         OrderReqDto reqDto = new OrderReqDto();
         reqDto.setOrderNo("OF2016100100001");
-        reqDto.setOrderType(OrderType.ONLINE.getCode());
+        reqDto.setOrderType(OrderType.ONLINE_SELF_RUN.getCode());
         reqDto.setCustomerName("Tom");
         reqDto.setCustomerMobile("13100000001");
         reqDto.setCustomerIdNumber("0241000321312");
