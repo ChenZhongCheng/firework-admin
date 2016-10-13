@@ -25,6 +25,15 @@
 		customer_zip, cost, valid, create_time, create_user, update_time, update_user
 	</sql>
 
+    <!--Seach order-->
+    <select id="searchById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM f_order
+        WHERE
+          id = #{id}
+    </select>
+
     <!--Add new order-->
     <insert id="addOrder" parameterType="cn.fireworkstudio.admin.bean.Order" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO f_order

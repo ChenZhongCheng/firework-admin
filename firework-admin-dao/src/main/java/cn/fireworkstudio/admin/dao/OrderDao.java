@@ -35,4 +35,12 @@ public interface OrderDao {
      * @return order count
      */
     int searchOrderCount(OrderReqDto reqDto);
+
+    /**
+     * Search order by primary key
+     *
+     * @param id primary key
+     * @return order found
+     */
+    Order searchById(Long id);
 }

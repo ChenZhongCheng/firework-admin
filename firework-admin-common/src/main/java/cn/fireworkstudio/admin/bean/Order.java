@@ -278,7 +278,6 @@ public class Order implements Serializable {
     /**
      * Get createUser
      */
-    @JsonIgnore
     public String getCreateUser() {
         return createUser;
     }

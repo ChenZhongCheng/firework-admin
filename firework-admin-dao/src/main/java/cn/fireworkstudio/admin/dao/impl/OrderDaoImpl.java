@@ -54,4 +54,15 @@ public class OrderDaoImpl implements OrderDao {
     public int searchOrderCount(OrderReqDto reqDto) {
         return sessionTemplate.selectOne(NAMESPACE + ".searchOrderCount", reqDto);
     }
+
+    /**
+     * Search order by primary key
+     *
+     * @param id primary key
+     * @return order found
+     */
+    @Override
+    public Order searchById(Long id) {
+        return sessionTemplate.selectOne(NAMESPACE + ".searchById", id);
+    }
 }

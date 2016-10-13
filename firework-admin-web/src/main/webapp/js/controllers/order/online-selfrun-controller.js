@@ -89,18 +89,17 @@ adminApp.controller('onlineSelfRunController', ['$scope', '$rootScope', 'orderSe
          * View detail info from modal
          */
         $scope.viewItem = function (itemId) {
-            // taskGroupService.setSysNo(itemId);
-            //
-            // var modalInstance = $modal.open({
-            //     templateUrl: 'views/task/task-group-modal.html',
-            //     controller: 'taskGroupModalController',
-            //     backdrop: 'static'
-            // });
-            //
-            // return modalInstance.result.then(function (reply) {
-            //     //alert(JSON.stringify(reply));
-            //     $scope.dtInstance.rerender();
-            // });
+            orderService.setOrderId(itemId);
+
+            var modalInstance = $modal.open({
+                templateUrl: 'views/order/online-selfrun-modal.html',
+                controller: 'onlineSelfRunModalController',
+                backdrop: 'static'
+            });
+
+            return modalInstance.result.then(function (reply) {
+                $scope.dtInstance.rerender();
+            });
         };
 
         /**

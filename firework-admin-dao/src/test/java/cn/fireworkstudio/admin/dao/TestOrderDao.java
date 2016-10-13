@@ -69,4 +69,10 @@ public class TestOrderDao {
         int orderCount = orderDao.searchOrderCount(reqDto);
         logger.info("Order count: " + orderCount);
     }
+
+    @Test
+    public void testSearchById() throws Exception {
+        Order order = orderDao.searchById(2L);
+        logger.info(JSON.toJSONString(order));
+    }
 }
