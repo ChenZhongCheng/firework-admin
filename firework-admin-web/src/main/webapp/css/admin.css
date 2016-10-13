@@ -97,3 +97,11 @@ body {
     background-color: rgba(200, 200, 0, 0.5);
     z-index: 1600;
 }
+
+.ui-dialog {
+    min-width: 200px;
+}
+
+div.ui-dialog-header > button {
+    width: auto;
+}

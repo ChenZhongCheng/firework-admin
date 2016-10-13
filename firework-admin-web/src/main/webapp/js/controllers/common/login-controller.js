@@ -5,8 +5,8 @@
  **
  * Author:  Daniel Kong
  */
-adminApp.controller('loginController', ['$scope', '$window', 'userService', 'authService', 'md5',
-    function ($scope, $window, userService, authService, md5) {
+adminApp.controller('loginController', ['$scope', '$window', 'userService', 'authService', 'md5', 'Popup',
+    function ($scope, $window, userService, authService, md5, Popup) {
 
         /**
          * Error prompt
@@ -14,7 +14,7 @@ adminApp.controller('loginController', ['$scope', '$window', 'userService', 'aut
          * @param errMsg
          */
         var reportError = function (errMsg) {
-            alert(errMsg ? errMsg : 'Login Failed');
+            Popup.alert(errMsg ? errMsg : 'Login Failed');
         };
 
         /**

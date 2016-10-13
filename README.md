@@ -77,6 +77,7 @@ firework-admin benefits from these projects:
 * [angular-charts](https://github.com/chinmaymk/angular-charts)
 * [angular-toolkits](https://github.com/shaunxu/angular-toolkits)
 * [angular-busy](https://github.com/cgross/angular-busy)
+* [angular-popups](https://github.com/aui/angular-popups)
 * [angular-multi-select](https://github.com/alalonde/angular-multi-select)
 * [angular-moment](https://github.com/urish/angular-moment)
 * [angular-md5](https://github.com/gdi2290/angular-md5)
