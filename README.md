@@ -1,4 +1,6 @@
 # firework-admin
+[Readme in Chinese](https://github.com/fireworkstudio/firework-admin/tree/master/README-zh.md)
+
 >An admin portal based on
 >* Spring MVC
 >* Spring Security
@@ -16,7 +18,7 @@
 * Easy to create Bar/Pie/Line charts.
 * Multi maven profiles support.
 * Junit support.
-* Spring MVC + Mybatis + AngularJS stack.
+* Spring MVC + Spring Security + Mybatis + AngularJS stack.
 
 
 ## Install:
