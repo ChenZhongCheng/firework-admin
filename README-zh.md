@@ -59,7 +59,7 @@
 ### 系统截图:
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161007232234.jpg)
 
-![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161008002231.jpg)
+![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161014111628.jpg)
 
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161013100344.jpg)
 
