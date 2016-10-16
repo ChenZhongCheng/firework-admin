@@ -64,7 +64,7 @@ N/A
 
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161016132412.jpg)
 
-![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161016133401.jpg)
+![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161016134326.jpg)
 ## License:
 
 License under [Apache 2.0 license](http://opensource.org/licenses/Apache-2.0)

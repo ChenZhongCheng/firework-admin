@@ -9,7 +9,6 @@ adminApp.controller('onlineSelfRunController', ['$scope', '$rootScope', 'orderSe
     function ($scope, $rootScope, orderService, $modal, $compile, DTInstances, DTOptionsBuilder, DTColumnDefBuilder) {
 
         var isInit = true;
-
         $scope.records = {};
 
         /**
