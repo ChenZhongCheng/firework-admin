@@ -22,7 +22,6 @@
 
 
 ## Install:
-  
 * Add following section in maven's settings.xml:
 
 ```xml
@@ -48,7 +47,7 @@
 * Run `mvn clean install -P develop`
 * Deploy api.war `(/api)` and admin.war `(/admin)` in tomcat. (If you don't want `8080` port, you may modify `constant.js`)
 * Access [http://localhost:8080/admin](http://localhost:8080/admin) via Chrome/Firefox, login name: `demo`, password: `demo`
- 
+
 ### Build Environment (Recommend):
 * Maven 3
 * JDK 8
@@ -65,6 +64,7 @@ N/A
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161016140309.jpg)
 
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161016140326.jpg)
+
 ## License:
 
 License under [Apache 2.0 license](http://opensource.org/licenses/Apache-2.0)

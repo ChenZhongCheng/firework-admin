@@ -1,0 +1,86 @@
+<div class="">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" ng-click="close()">&times;</button>
+            <h4 class="modal-title">Order Info</h4>
+        </div>
+        <div class="modal-body">
+            <!-- Row 1 -->
+            <div class="form-inline col-md-12">
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Order No.</div>
+                    <input type="text" class="form-control" ng-model="order.orderNo" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Order Type</div>
+                    <input type="text" class="form-control" ng-model="order.orderTypeName" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Customer Name</div>
+                    <input type="text" class="form-control" ng-model="order.customerName" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Customer Gender</div>
+                    <input type="text" class="form-control" ng-model="order.customerGenderName"
+                           ng-disabled="true">
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Row 2 -->
+            <div class="form-inline col-md-12">
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Customer Id No.</div>
+                    <input type="text" class="form-control" ng-model="order.customerIdNumber" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Customer Mobile</div>
+                    <input type="text" class="form-control" ng-model="order.customerMobile" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Sku Code</div>
+                    <input type="text" class="form-control" ng-model="order.skuCode" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-3">
+                    <div class="bolder ">SkuName</div>
+                    <input type="text" class="form-control" ng-model="order.skuName" ng-disabled="true">
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Row 3 -->
+            <div class="form-inline col-md-12">
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Zip Code</div>
+                    <input type="text" class="form-control" ng-model="order.customerZip" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Cost ($)</div>
+                    <input type="text" class="form-control" ng-model="order.cost" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-6">
+                    <div class="bolder ">Customer Address</div>
+                    <input type="text" class="form-control" ng-model="order.customerAddress" ng-disabled="true">
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Row 4 -->
+            <div class="form-inline col-md-12">
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Create User</div>
+                    <input type="text" class="form-control" ng-model="order.createUser" ng-disabled="true">
+                </div>
+                <div class="control-group col-md-3">
+                    <div class="bolder ">Create Time</div>
+                    <input type="text" class="form-control" ng-model="order.createTime" ng-disabled="true">
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

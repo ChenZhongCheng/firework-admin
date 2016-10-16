@@ -21,7 +21,6 @@
 
 
 ## 安装步骤:
-  
 * 将以下段落添加至 maven 的 settings.xml:
 
 ```xml
@@ -47,7 +46,7 @@
 * 运行 `mvn clean install -P develop` 命令
 * 将 api.war `(/api)` 和 admin.war `(/admin)` 发布至 tomcat. (如果您不使用 `8080` 端口, 需要修改 `constant.js`文件)
 * 在 Chrome/Firefox 中访问 [http://localhost:8080/admin](http://localhost:8080/admin)，用户名: `demo`, 密码: `demo`
- 
+
 ### 推荐的构建环境:
 * Maven 3
 * JDK 8
@@ -64,6 +63,7 @@
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161016140309.jpg)
 
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161016140326.jpg)
+
 ## 软件许可:
 
 [Apache 2.0 license](http://opensource.org/licenses/Apache-2.0)
