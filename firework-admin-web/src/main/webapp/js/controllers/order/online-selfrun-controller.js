@@ -19,12 +19,19 @@ adminApp.controller('onlineSelfRunController', ['$scope', '$rootScope', 'orderSe
         };
 
         /**
+         * Get gender name
+         */
+        var getGenderName = function (data) {
+            return data.customerGender == 1 ? 'Male' : 'Female';
+        };
+
+        /**
          * Columns definition
          */
         $scope.dtColumnDefs = [
             DTColumnDefBuilder.newColumnDef(0).withOption('data', null).renderWith(createOrderNoHref).notSortable(),
             DTColumnDefBuilder.newColumnDef(1).withOption('data', 'customerName').notSortable(),
-            DTColumnDefBuilder.newColumnDef(2).withOption('data', 'customerGender').notSortable(),
+            DTColumnDefBuilder.newColumnDef(2).withOption('data', null).renderWith(getGenderName).notSortable(),
             DTColumnDefBuilder.newColumnDef(3).withOption('data', 'customerMobile').notSortable(),
             DTColumnDefBuilder.newColumnDef(4).withOption('data', 'skuCode').notSortable(),
             DTColumnDefBuilder.newColumnDef(5).withOption('data', 'skuName').notSortable(),
@@ -107,6 +114,19 @@ adminApp.controller('onlineSelfRunController', ['$scope', '$rootScope', 'orderSe
          */
         $scope.search = function () {
             $scope.dtInstance.rerender();
+        };
+
+        /**
+         * Clear search criteria
+         */
+        $scope.clear = function(){
+            $scope.orderNo = '';
+            $scope.customerName = '';
+            $scope.customerPhone = '';
+            $scope.customerIdNumber = '';
+            $scope.skuCode = '';
+            $scope.startDate = '';
+            $scope.endDate = '';
         };
 
         /**
