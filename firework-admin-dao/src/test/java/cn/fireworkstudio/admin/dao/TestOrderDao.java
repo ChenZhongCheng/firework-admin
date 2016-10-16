@@ -44,7 +44,9 @@ public class TestOrderDao {
         order.setCustomerMobile("13100000001");
         order.setCustomerAddress("Street1, A district, B city, C Province");
         order.setCustomerZip("10001");
-        order.setCost(10.5);
+        order.setSkuCode("6669702011");
+        order.setSkuName("Bullko Men's Pin Buckle 7058 Genuine Leather Belt");
+        order.setCost(23.79);
         order.setValid(1);
         order.setCreateUser(StringConstant.SYSTEM);
         assertTrue(orderDao.addOrder(order) > 0);
@@ -53,11 +55,11 @@ public class TestOrderDao {
     @Test
     public void testSearchOrder() throws Exception {
         OrderReqDto reqDto = new OrderReqDto();
-        reqDto.setOrderNo("OF2016100100001");
+        reqDto.setOrderNo("OL2016100100001");
         reqDto.setOrderType(OrderType.ONLINE_SELF_RUN.getCode());
-        reqDto.setCustomerName("Tom");
-        reqDto.setCustomerMobile("13100000001");
-        reqDto.setCustomerIdNumber("0241000321312");
+        reqDto.setCustomerName("David C. Jones");
+        reqDto.setCustomerMobile("704-595-4770");
+        reqDto.setCustomerIdNumber("8928324491");
         reqDto.setStartDate("2016-10-12");
         reqDto.setEndDate("2016-10-12");
         reqDto.setStart(0);

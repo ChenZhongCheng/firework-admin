@@ -12,6 +12,8 @@
         <result column="customer_mobile" property="customerMobile" jdbcType="VARCHAR"/>
         <result column="customer_address" property="customerAddress" jdbcType="VARCHAR"/>
         <result column="customer_zip" property="customerZip" jdbcType="VARCHAR"/>
+        <result column="sku_code" property="skuCode" jdbcType="VARCHAR"/>
+        <result column="sku_name" property="skuName" jdbcType="VARCHAR"/>
         <result column="cost" property="cost" jdbcType="DOUBLE"/>
         <result column="valid" property="valid" jdbcType="INTEGER"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
@@ -22,7 +24,7 @@
 
     <sql id="Base_Column_List">
 		id, order_no, order_type, customer_name, customer_gender, customer_id_number, customer_mobile, customer_address,
-		customer_zip, cost, valid, create_time, create_user, update_time, update_user
+		customer_zip, sku_code, sku_name, cost, valid, create_time, create_user, update_time, update_user
 	</sql>
 
     <!--Seach order-->
@@ -62,6 +64,12 @@
             <if test="customerZip != null">
                 customer_zip,
             </if>
+            <if test="skuCode != null">
+                sku_code,
+            </if>
+            <if test="skuName != null">
+                sku_name,
+            </if>
             <if test="cost != null">
                 cost,
             </if>
@@ -96,6 +104,12 @@
             <if test="customerZip != null">
                 #{customerZip},
             </if>
+            <if test="skuCode != null">
+                #{skuCode},
+            </if>
+            <if test="skuName != null">
+                #{skuName},
+            </if>
             <if test="cost != null">
                 #{cost},
             </if>
@@ -122,11 +136,14 @@
             <if test="customerName != null and customerName != ''">
                 AND customer_name = #{customerName}
             </if>
-            <if test="customerIdNumber != null">
+            <if test="customerIdNumber != null and customerIdNumber != ''">
                 AND customer_id_number = #{customerIdNumber}
             </if>
-            <if test="customerMobile != null">
+            <if test="customerMobile != null and customerMobile != ''">
                 AND customer_mobile = #{customerMobile}
+            </if>
+            <if test="skuCode != null and skuCode != ''">
+                AND sku_code = #{skuCode}
             </if>
             <if test="startDate != null and startDate != ''">
                 AND create_time >= str_to_date(#{startDate}, "%Y-%m-%d")
@@ -158,11 +175,14 @@
             <if test="customerName != null and customerName != ''">
                 AND customer_name = #{customerName}
             </if>
-            <if test="customerIdNumber != null">
+            <if test="customerIdNumber != null and customerIdNumber != ''">
                 AND customer_id_number = #{customerIdNumber}
             </if>
-            <if test="customerMobile != null">
+            <if test="customerMobile != null and customerMobile != ''">
                 AND customer_mobile = #{customerMobile}
+            </if>
+            <if test="skuCode != null and skuCode != ''">
+                AND sku_code = #{skuCode}
             </if>
             <if test="startDate != null and startDate != ''">
                 AND create_time >= str_to_date(#{startDate}, "%Y-%m-%d")

@@ -49,6 +49,15 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
+                    <label class="control-label col-md-4">Sku Code：</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" maxlength="32" autocomplete="off"
+                               ng-model="skuCode">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
                     <label class="control-label col-md-4">Start Date：</label>
                     <div class="col-md-8">
                         <input type="text" class="form-control" maxlength="25" placeholder="From"
@@ -84,10 +93,10 @@
                 <th>Order No</th>
                 <th>Customer</th>
                 <th>Gender</th>
-                <th>ID No</th>
                 <th>Mobile</th>
-                <th>Zip Code</th>
-                <th>Cost</th>
+                <th>Sku Code</th>
+                <th>Sku Name</th>
+                <th>Cost ($)</th>
                 <th>Time</th>
             </tr>
             </thead>

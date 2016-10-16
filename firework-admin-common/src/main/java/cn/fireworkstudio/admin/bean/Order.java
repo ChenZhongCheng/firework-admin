@@ -70,6 +70,16 @@ public class Order implements Serializable {
     private String customerZip;
 
     /**
+     * Sku Code
+     */
+    private String skuCode;
+
+    /**
+     * Sku Name
+     */
+    private String skuName;
+
+    /**
      * Money Spent
      */
     private Double cost;
@@ -251,6 +261,34 @@ public class Order implements Serializable {
      */
     public void setCustomerZip(String customerZip) {
         this.customerZip = customerZip;
+    }
+
+    /**
+     * 获得 skuCode
+     */
+    public String getSkuCode() {
+        return skuCode;
+    }
+
+    /**
+     * 设置 skuCode
+     */
+    public void setSkuCode(String skuCode) {
+        this.skuCode = skuCode;
+    }
+
+    /**
+     * 获得 skuName
+     */
+    public String getSkuName() {
+        return skuName;
+    }
+
+    /**
+     * 设置 skuName
+     */
+    public void setSkuName(String skuName) {
+        this.skuName = skuName;
     }
 
     /**

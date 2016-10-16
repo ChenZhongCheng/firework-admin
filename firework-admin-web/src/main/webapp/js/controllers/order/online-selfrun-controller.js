@@ -26,9 +26,9 @@ adminApp.controller('onlineSelfRunController', ['$scope', '$rootScope', 'orderSe
             DTColumnDefBuilder.newColumnDef(0).withOption('data', null).renderWith(createOrderNoHref).notSortable(),
             DTColumnDefBuilder.newColumnDef(1).withOption('data', 'customerName').notSortable(),
             DTColumnDefBuilder.newColumnDef(2).withOption('data', 'customerGender').notSortable(),
-            DTColumnDefBuilder.newColumnDef(3).withOption('data', 'customerIdNumber').notSortable(),
-            DTColumnDefBuilder.newColumnDef(4).withOption('data', 'customerMobile').notSortable(),
-            DTColumnDefBuilder.newColumnDef(5).withOption('data', 'customerZip').notSortable(),
+            DTColumnDefBuilder.newColumnDef(3).withOption('data', 'customerMobile').notSortable(),
+            DTColumnDefBuilder.newColumnDef(4).withOption('data', 'skuCode').notSortable(),
+            DTColumnDefBuilder.newColumnDef(5).withOption('data', 'skuName').notSortable(),
             DTColumnDefBuilder.newColumnDef(6).withOption('data', 'cost').notSortable(),
             DTColumnDefBuilder.newColumnDef(7).withOption('data', 'createTime').notSortable()
         ];
@@ -51,6 +51,7 @@ adminApp.controller('onlineSelfRunController', ['$scope', '$rootScope', 'orderSe
                 customerName: $scope.customerName,
                 customerPhone: $scope.customerPhone,
                 customerIdNumber: $scope.customerIdNumber,
+                skuCode: $scope.skuCode,
                 startDate: $scope.startDate,
                 endDate: $scope.endDate
             });

@@ -33,6 +33,11 @@ public class OrderReqDto extends PageReqDto {
     private String customerMobile;
 
     /**
+     * Sku Code
+     */
+    private String skuCode;
+
+    /**
      * Start Date
      */
     private String startDate;
@@ -120,6 +125,20 @@ public class OrderReqDto extends PageReqDto {
      */
     public void setCustomerMobile(String customerMobile) {
         this.customerMobile = customerMobile;
+    }
+
+    /**
+     * 获得 skuCode
+     */
+    public String getSkuCode() {
+        return skuCode;
+    }
+
+    /**
+     * 设置 skuCode
+     */
+    public void setSkuCode(String skuCode) {
+        this.skuCode = skuCode;
     }
 
     /**
