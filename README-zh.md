@@ -1,6 +1,7 @@
 # firework-admin
 - [教程](https://fireworkstudio.github.io/firework-admin/zh/)
 - [Readme in English](https://github.com/fireworkstudio/firework-admin/tree/master/README.md)
+
 > 一个基于 Spring MVC + Spring Security + MyBatis + Angularjs + Bootstrap + D3.js 技术栈开发的管理后台
 
 ## 功能:
