@@ -1,4 +1,5 @@
 # firework-admin
+[教程](https://fireworkstudio.github.io/firework-admin/zh/)
 [Readme in English](https://github.com/fireworkstudio/firework-admin/tree/master/README.md)
 >一个基于下列技术开发的管理后台
 >* Spring MVC

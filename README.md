@@ -1,4 +1,5 @@
 # firework-admin
+[Tutorial](https://fireworkstudio.github.io/firework-admin/en/)
 [中文介绍](https://github.com/fireworkstudio/firework-admin/tree/master/README-zh.md)
 
 >An admin portal based on
