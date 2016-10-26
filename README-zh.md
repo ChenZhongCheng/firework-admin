@@ -48,11 +48,7 @@
 * Maven 3
 * JDK 8
 
-## 文档:
-
-敬请期待
-
-### 系统截图:
+## 系统截图:
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161007232234.jpg)
 
 ![image](http://7xknr8.com1.z0.glb.clouddn.com/asset/resource/20161014111628.jpg)
