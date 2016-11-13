@@ -38,7 +38,7 @@
     <activeProfile>myProfile</activeProfile>
   </activeProfiles>
 ```
-* 使用 `firework1.sql` 和 `firework2.sql` (见schema 目录) 初始化两个数据库 firework1 和 firework2
+* 使用 `dbinit.sql` (见schema 目录) 初始化两个数据库 firework1 和 firework2
 * 如需修改连接数据库的用户名、密码， 请修改根 `pom.xml`
 * 运行 `mvn clean install -P develop` 命令
 * 将 api.war `(/api)` 和 admin.war `(/admin)` 发布至 tomcat. (如果您不使用 `8080` 端口, 需要修改 `constant.js`文件)

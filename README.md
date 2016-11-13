@@ -38,7 +38,7 @@
     <activeProfile>myProfile</activeProfile>
   </activeProfiles>
 ```
-* Using `firework1.sql` and `firework2.sql` (in schema folder) to initialize two databases
+* Using `dbinit.sql` (in schema folder) to initialize two databases
 * Database username/password could be changed in root `pom.xml`
 * Run `mvn clean install -P develop`
 * Deploy api.war `(/api)` and admin.war `(/admin)` in tomcat. (If you don't want `8080` port, you may modify `constant.js`)
